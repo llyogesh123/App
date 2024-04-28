@@ -70,7 +70,7 @@ const handleCategoryClick = (category: string | null) => {
   <div className='text-black'>    
 <div className="flex justify-center mb-8 text-bold">
   <CategoryList
-    categories={['Programming', 'History', 'English', 'Astronomy']}
+    categories={['Programming', 'History', 'English', 'Astronomy', 'Maths']}
     onCategoryClick={handleCategoryClick}
   />
 </div>
@@ -94,18 +94,22 @@ const handleCategoryClick = (category: string | null) => {
             >
               
 {/* Front Face */}
-<div className={`card-face front absolute w-full h-full  rounded-md shadow-md p-4 cursor-pointer transition-transform ${card.flipped ? 'flipped' : ''} bg-green-400 hover:bg-blue-300`}>
+<div className={`card-face front absolute w-full h-full  rounded-md shadow-md p-4 cursor-pointer transition-transform ${card.flipped ? 'flipped' : ''} bg-blue-400 hover:bg-blue-300`}>
 <h2 className="text-lg font-bold mb-2">{card.question}</h2>
-<div className='flex items-center justify-center text-left '>
-  <p>{card.imageUrl}</p>
+
 </div>
-</div>
+
+
 
 {/* Back Face */}
 <div className={`card-face back absolute w-full h-full  rounded-md shadow-md p-4 cursor-pointer transition-transform transform rotate-y-180 ${card.flipped ? 'flipped' : ''} bg-yellow-300 hover:bg-blue-300`}>
   <div className="text-center">
     <p className="text-sm text-gray-600">{card.category}</p>
     <p className="text-lg font-bold mb-2">{card.answer}</p>
+    <div className='flex items-center justify-center text-left '>
+    <img src={card.imageUrl} alt="Card content" />
+    </div>
+    
   </div>
 </div>
             </div>

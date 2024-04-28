@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
-import Navigation from './Navigation'; // Import the Navigation component
+import {Navigation} from './Navigation'; // Import the Navigation component
 import FlashcardPage from './components/FlashcardPage';
 
 const AppRouter: React.FC = () => {
